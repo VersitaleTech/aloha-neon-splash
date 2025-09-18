@@ -8,35 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Tropical Background Colors */
+    --background: 220 30% 5%;
+    --foreground: 40 85% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card Colors */
+    --card: 220 25% 8%;
+    --card-foreground: 40 85% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 40 85% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon Tropical Colors */
+    --primary: 330 100% 65%; /* Neon Rose Pink */
+    --primary-foreground: 220 30% 5%;
+    --primary-glow: 330 100% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 140 85% 55%; /* Neon Green */
+    --secondary-foreground: 220 30% 5%;
+    --secondary-glow: 140 85% 65%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 185 100% 60%; /* Neon Aqua Blue */
+    --accent-foreground: 220 30% 5%;
+    --accent-glow: 185 100% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Supporting Colors */
+    --muted: 220 20% 15%;
+    --muted-foreground: 40 50% 80%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 330 100% 65%;
 
-    --radius: 0.5rem;
+    /* Tropical Gradients */
+    --gradient-tropical: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-sunset: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-ocean: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--secondary)));
+    --gradient-background: linear-gradient(180deg, hsl(220 30% 5%), hsl(220 25% 8%));
+
+    /* Neon Shadows & Glows */
+    --shadow-neon-pink: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-neon-green: 0 0 20px hsl(var(--secondary) / 0.5), 0 0 40px hsl(var(--secondary) / 0.3);
+    --shadow-neon-blue: 0 0 20px hsl(var(--accent) / 0.5), 0 0 40px hsl(var(--accent) / 0.3);
+    --shadow-tropical: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+
+    /* Animation Variables */
+    --transition-tropical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --bounce-tropical: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +124,96 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Tropical Gradients */
+  .bg-gradient-tropical {
+    background: var(--gradient-tropical);
+  }
+  
+  .bg-gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  
+  .bg-gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+  
+  .bg-gradient-background {
+    background: var(--gradient-background);
+  }
+
+  /* Neon Glow Effects */
+  .glow-pink {
+    box-shadow: var(--shadow-neon-pink);
+  }
+  
+  .glow-green {
+    box-shadow: var(--shadow-neon-green);
+  }
+  
+  .glow-blue {
+    box-shadow: var(--shadow-neon-blue);
+  }
+  
+  .shadow-tropical {
+    box-shadow: var(--shadow-tropical);
+  }
+
+  /* Floating Bubbles Animation */
+  .bubble-float {
+    animation: bubble-float 6s ease-in-out infinite;
+  }
+  
+  .bubble-float-delayed {
+    animation: bubble-float 8s ease-in-out infinite 2s;
+  }
+
+  /* Tropical Pulse */
+  .pulse-tropical {
+    animation: pulse-tropical 2s ease-in-out infinite;
+  }
+
+  /* Hover Glow */
+  .hover-glow-pink:hover {
+    box-shadow: var(--shadow-neon-pink);
+    transform: translateY(-2px);
+    transition: var(--transition-tropical);
+  }
+  
+  .hover-glow-green:hover {
+    box-shadow: var(--shadow-neon-green);
+    transform: translateY(-2px);
+    transition: var(--transition-tropical);
+  }
+  
+  .hover-glow-blue:hover {
+    box-shadow: var(--shadow-neon-blue);
+    transform: translateY(-2px);
+    transition: var(--transition-tropical);
+  }
+}
+
+@keyframes bubble-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-tropical {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
   }
 }

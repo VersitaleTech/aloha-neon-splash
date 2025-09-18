@@ -84,6 +84,15 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bubble-float": "bubble-float 6s ease-in-out infinite",
+        "bubble-float-delayed": "bubble-float 8s ease-in-out infinite 2s",
+        "pulse-tropical": "pulse-tropical 2s ease-in-out infinite",
+      },
+      backgroundImage: {
+        'gradient-tropical': 'var(--gradient-tropical)',
+        'gradient-sunset': 'var(--gradient-sunset)',
+        'gradient-ocean': 'var(--gradient-ocean)',
+        'gradient-background': 'var(--gradient-background)',
       },
     },
   },
