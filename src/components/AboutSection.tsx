@@ -5,8 +5,6 @@ import tropicalLeaves from '@/assets/tropical-leaves.png';
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 px-4 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/Aloha-laundry-wasmachine.jpg)' }}>
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-background/80"></div>
       {/* Background Decorations */}
       <div 
         className="absolute top-10 right-10 w-32 h-32 opacity-20 z-10"
