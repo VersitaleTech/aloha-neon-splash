@@ -16,7 +16,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/Aloha-Laundry-Logo-Without-background .png" 
+              src="/Aloha-Laundry-Tx-bckground-16.png" 
               alt="ALOHA Laundry Logo" 
               className="h-12 w-auto object-contain"
             />
