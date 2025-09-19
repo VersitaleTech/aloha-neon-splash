@@ -1,5 +1,4 @@
 import React from 'react';
-import { TropicalButton } from './ui/tropical-button';
 
 const Header = () => {
   const scrollToSection = (sectionId: string) => {
