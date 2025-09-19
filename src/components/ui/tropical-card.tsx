@@ -12,9 +12,6 @@ const tropicalCardVariants = cva(
         neon: "border-primary/30 bg-card/80 backdrop-blur-sm hover-glow-pink",
         secondary: "border-secondary/30 bg-card/80 backdrop-blur-sm hover-glow-green", 
         accent: "border-accent/30 bg-card/80 backdrop-blur-sm hover-glow-blue",
-        neon: "border-primary/30 bg-card/40 backdrop-blur-sm hover-glow-pink",
-        secondary: "border-secondary/30 bg-card/40 backdrop-blur-sm hover-glow-green", 
-        accent: "border-accent/30 bg-card/40 backdrop-blur-sm hover-glow-blue",
         gradient: "bg-gradient-tropical border-0 text-white shadow-tropical",
       },
       padding: {
