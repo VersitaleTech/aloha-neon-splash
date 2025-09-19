@@ -4,7 +4,7 @@ import tropicalLeaves from '@/assets/tropical-leaves.png';
 
 const AboutSection = () => {
   return (
-    <section className="py-20 px-4 relative">
+    <section id="about" className="py-20 px-4 relative">
       {/* Background Decorations */}
       <div 
         className="absolute top-10 right-10 w-32 h-32 opacity-20"
