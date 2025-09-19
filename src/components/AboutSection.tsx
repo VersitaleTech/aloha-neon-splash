@@ -4,18 +4,20 @@ import tropicalLeaves from '@/assets/tropical-leaves.png';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-4 relative">
+    <section id="about" className="py-20 px-4 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/Aloha-laundry-wasmachine.jpg)' }}>
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-background/80"></div>
       {/* Background Decorations */}
       <div 
-        className="absolute top-10 right-10 w-32 h-32 opacity-20"
+        className="absolute top-10 right-10 w-32 h-32 opacity-20 z-10"
         style={{ backgroundImage: `url(${tropicalLeaves})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}
       />
       <div 
-        className="absolute bottom-10 left-10 w-40 h-40 opacity-15 rotate-45"
+        className="absolute bottom-10 left-10 w-40 h-40 opacity-15 rotate-45 z-10"
         style={{ backgroundImage: `url(${tropicalLeaves})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}
       />
       
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="w-24 h-1 bg-gradient-tropical mx-auto rounded-full"></div>
         </div>
