@@ -17,9 +17,6 @@ const AboutSection = () => {
       
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-sunset bg-clip-text text-transparent">
-            About ALOHA Laundry
-          </h2>
           <div className="w-24 h-1 bg-gradient-tropical mx-auto rounded-full"></div>
         </div>
         
