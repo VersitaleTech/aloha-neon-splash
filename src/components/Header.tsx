@@ -18,7 +18,7 @@ const Header = () => {
             <img 
               src="/Aloha-Laundry-Logo-Without-background .png" 
               alt="ALOHA Laundry Logo" 
-              className="h-20 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </div>
           
