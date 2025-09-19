@@ -1,6 +1,5 @@
 import React from 'react';
 import { TropicalButton } from './ui/tropical-button';
-import alohaLogo from '@/assets/aloha-logo.png';
 
 const Header = () => {
   const scrollToSection = (sectionId: string) => {
@@ -17,7 +16,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src={alohaLogo} 
+              src="/Aloha-Laundry-Tx-bckground-16.png" 
               alt="ALOHA Laundry Logo" 
               className="h-12 w-auto object-contain"
             />
