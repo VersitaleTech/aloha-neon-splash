@@ -32,9 +32,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/Aloha-laundry-outside-view.jpg)' }}>
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-background/80"></div>
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 relative z-10">
           <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-tropical bg-clip-text text-transparent">
             Get in Touch
           </h2>
@@ -44,7 +46,7 @@ const ContactSection = () => {
           <div className="w-24 h-1 bg-gradient-sunset mx-auto rounded-full mt-6"></div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 relative z-10">
           {/* Contact Info */}
           <div className="space-y-8">
             <TropicalCard variant="neon" className="relative overflow-hidden">
